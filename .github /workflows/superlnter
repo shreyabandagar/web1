@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neeta's Neon Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #00f9ff;
+      text-shadow: 0 0 10px #00f9ff, 0 0 20px #00f9ff;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #a6e7ff;
+    }
+
+    .shop {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 14px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px #00f9ff;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .product-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-info h2 {
+      font-size: 1.2rem;
+      color: #00f9ff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #00f9ff;
+    }
+
+    .price {
+      color: #ff66cc;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .product-info button {
+      background: #00f9ff;
+      color: #000;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00f9ff;
+      transition: background 0.3s ease;
+    }
+
+    .product-info button:hover {
+      background: #00d0d0;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #00ff80;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Neeta’s Neon Shop ✨</h1>
+    <p>Bright Style. Smart Shopping. Cool Vibes. 😎</p>
+  </header>
+
+  <section class="shop">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://source.unsplash.com/400x300/?shoes" alt="Sneakers">
+      <div class="product-info">
+        <h2>👟 Neon Sneakers</h2>
+        <p class="price">₹2,499</p>
+        <button onclick="buy('msg1')">Buy Now</button>
+        <p class="message" id="msg1"></p>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://source.unsplash.com/400x300/?headphones" alt="Headphones">
+      <div class="product-info">
+        <h2>🎧 Glow Headphones</h2>
+        <p class="price">₹1,799</p>
+        <button onclick="buy('msg2')">Buy Now</button>
+        <p class="message" id="msg2"></p>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://source.unsplash.com/400x300/?watch" alt="Watch">
+      <div class="product-info">
+        <h2>⌚ LED Smartwatch</h2>
+        <p class="price">₹3,299</p>
+        <button onclick="buy('msg3')">Buy Now</button>
+        <p class="message" id="msg3"></p>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://source.unsplash.com/400x300/?jacket" alt="Jacket">
+      <div class="product-info">
+        <h2>🧥 Neon Street Jacket</h2>
+        <p class="price">₹2,999</p>
+        <button onclick="buy('msg4')">Buy Now</button>
+        <p class="message" id="msg4"></p>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function buy(id) {
+      document.getElementById(id).innerText = "✅ Order Confirmed, Neeta! 🚀";
+    }
+  </script>
+
+</body>
+</html>
